@@ -1,12 +1,13 @@
 ---
 import Container from "./Container.astro";
+const basePath = import.meta.env.BASE_URL;
 const links = [
     {
-        to: "/#features",
+        to: `${basePath}#features`,
         label: "Industries",
     },
     {
-        to: "/#solution",
+        to: `${basePath}#solution`,
         label: "Our Approach",
     },
 ];
@@ -48,7 +49,7 @@ const links = [
         <Container>
             <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
                 <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
-                    <a href="/#home" aria-label="logo" class="flex items-center space-x-2">
+                    <a href={`${basePath}#home`} aria-label="logo" class="flex items-center space-x-2">
                         <span class="text-2xl font-bold text-gray-900 dark:text-white">Shuxuan Co., Ltd. <br /> 数玄株式会社</span>
                     </a>
 
@@ -76,7 +77,7 @@ const links = [
                     </div>
 
                     <div class="mt-12 lg:mt-0">
-                        <a href="/#contact" class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+                        <a href={`${basePath}#contact`} class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
                             <span class="relative text-sm font-semibold text-white"> Contact Us</span>
                         </a>
                     </div>
